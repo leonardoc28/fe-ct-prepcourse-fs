@@ -142,11 +142,36 @@ function operadoresLogicos(num1, num2, num3) {
   // Si alguno de los argumentos es cero, retornar ---> "Error".
   // Si no se cumple ninguna de las condiciones anteriores, retornar false.
   // Tu código:
-  if (num1 === 0 || num2 === 0 || num3 === 0) return "Error";
-  if (num1 < 0 || num2 < 0 || num3 < 0) return "Hay negativos";
-  if (num1 > 0 && num2 > 0 && num3 > 0) return "Numero 1 es mayor y positivo";
-  if (num3 > num1 && num3 > num2) return (num3 = num3 + 1);
-  else return "false";
+  if (num1 < 0 || num2 < 0 || num3 < 0) {
+    return "Hay negativos";
+  }
+  if (num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
+  }
+  if (num1 > 0 && num1 > num2 && num1 > num3) {
+    return "Numero 1 es mayor y positivo";
+  }
+  if (num3 > num1 && num3 > num2) {
+    return num3 + 1;
+  } else {
+    return false;
+  }
+  /*
+  if (num1 > 0 && num1 > num2 && num1 > num3) {
+    return "Numero 1 es mayor y positivo";
+  }
+  if (num1 === 0 || num2 === 0 || num3 === 0) {
+    return "Error";
+  }
+  if (num1 < 0 || num2 < 0 || num3 < 0) {
+    return "Hay negativos";
+  }
+  if (num3 > num1 && num3 > num2) {
+    return num3++;
+  } else {
+    return false;
+  }
+  */
 }
 
 function esPrimo(num) {
@@ -182,14 +207,15 @@ function tieneTresDigitos(num) {
 }
 
 function doWhile(num) {
-  // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
-  // Retornar el valor final.
-  // Utilizar el bucle Do-While.
-  // Tu código:
+  //Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
+  //Retornar el valor final.
+  //Utilizar el bucle Do-While.
+  //Tu código:
+
   var i = 0;
   do {
     i = i++;
-    num += 5;
+    num = num += 5;
   } while (i < 8);
   return num;
 }
